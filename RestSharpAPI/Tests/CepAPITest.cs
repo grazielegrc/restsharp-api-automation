@@ -8,7 +8,7 @@ namespace RestSharpAPI.Tests;
 
 public class Tests
 {   
-    string valid_cep = "13207340";
+    string valid_cep = "01153000";
     private string base_url = "https://viacep.com.br/ws/" ;
     
     [SetUp]
@@ -17,7 +17,7 @@ public class Tests
         
     }
 
-    [TestCase("13207340", HttpStatusCode.OK, TestName = "Check success status code")]
+    [TestCase($"{valid_cep}", HttpStatusCode.OK, TestName = "Check success status code")]
     [TestCase("111111111", HttpStatusCode.BadRequest, TestName = "Check error status code")]
     public void StatusCodeTest(string cep, HttpStatusCode expectedHttpStatusCode)
     {   
@@ -60,9 +60,9 @@ public class Tests
         var getResponse = JsonConvert.DeserializeObject<GetCepResponse>(response.Content);
     
         // assert
-        Assert.That(getResponse.Logradouro, Is.EqualTo("Rua Congo"));
-        Assert.That(getResponse.Bairro, Is.EqualTo("Jardim Bonfiglioli"));
-        Assert.That(getResponse.Localidade, Is.EqualTo("Jundiaí"));
+        Assert.That(getResponse.Logradouro, Is.EqualTo("Rua Vitorino Carmilo"));
+        Assert.That(getResponse.Bairro, Is.EqualTo("Barra Funda"));
+        Assert.That(getResponse.Localidade, Is.EqualTo("São Paulo"));
         Assert.That(getResponse.Uf, Is.EqualTo("SP"));
         Assert.That(getResponse.Ddd, Is.EqualTo("11"));
     }
