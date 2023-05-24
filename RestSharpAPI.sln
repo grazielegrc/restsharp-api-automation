@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAPI", "TestAPI\TestAPI.csproj", "{4935A996-207D-4EF2-B6DA-BEA3A17ED471}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestSharpAPI", "RestSharpAPI\RestSharpAPI.csproj", "{4935A996-207D-4EF2-B6DA-BEA3A17ED471}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

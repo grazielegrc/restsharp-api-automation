@@ -1,4 +1,4 @@
-namespace TestAPI.Data;
+namespace RestSharpAPI.Data;
 
 public class GetCepResponse
 {   
