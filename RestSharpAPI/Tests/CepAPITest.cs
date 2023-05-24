@@ -2,9 +2,9 @@ using System.Net;
 using Newtonsoft.Json;
 using RestSharp;
 using NUnit.Framework;
-using TestAPI.Data;
+using RestSharpAPI.Data;
 
-namespace TestAPI.Tests;
+namespace RestSharpAPI.Tests;
 
 public class Tests
 {   
@@ -26,9 +26,7 @@ public class Tests
         var request = new RestRequest($"{cep}/json", Method.Get);
 
         // act
-        var response = client.Execute(request);
-
-        Console.WriteLine(response.Content);
+        var response = client.Execute(request);        
         
         // assert
         Assert.That(response.StatusCode, Is.EqualTo(expectedHttpStatusCode));
