@@ -1,5 +1,7 @@
 # RestSharp API Automation
 
+This is a sample project to demonstrate API automation with RestSharp C#.
+
 ## Pre-requisites
 - VSCode
 - .NET Core
